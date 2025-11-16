@@ -27,8 +27,6 @@ Above is the state diagram for the light controller itself. S0 is where Light A 
 
 I chose to use one-hot encoding due to the fact that it would require less external gates (combinational logic), reducing propogation delay as a whole. Although it would require two more flip-flops than binary encoding, the reduction of next-state logic complexity makes it worth it. 
 
-## Extended State Table (3 Inputs, 4 Outputs)
-
 | Present State |       | Input       | Next State   |       | Output        |
 |---------------|-------|------------|--------------|-------|---------------|
 | A | B | C | D  | x | y | z | A | B | C | D | Y1 | Y2 | Y3 | Y4 |
@@ -38,6 +36,8 @@ I chose to use one-hot encoding due to the fact that it would require less exter
 | 0 | 0 | 0 | 0  | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0  | 0  | 0  | 0  |
 | 0 | 0 | 0 | 0  | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0  | 0  | 0  | 0  |
 | … | … | … | …  | … | … | … | … | … | … | … | …  | …  | …  | …  |
+
+
 
 
 
