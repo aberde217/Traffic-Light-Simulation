@@ -9,8 +9,15 @@ This is a design of an actuated traffic light controller at a four-way intersect
 Above is the state diagram for the light controller itself. S0 is where Light A is green and Light B is red. S1 is where Light A is yellow and Light B is red. S3 is where Light A is red and Light B is green. S4 is where Light A is red and Light B is yellow.
 
 ### State Encoding Table and State Transition Table
-Representation of lights: GREEN = 2'b10   YELLOW = 2'b01    RED = 2'b00
 
+2-bit Binary Encoding for Traffic Lights 
+| Light  | Binary |
+|--------|--------|
+| GREEN  | 2'b10  |
+| YELLOW | 2'b01  |
+| RED    | 2'b00  |
+
+State Encoding Table
 | State | One-Hot Code |
 |----------|----------|
 | S0    | 0001     |
@@ -18,3 +25,4 @@ Representation of lights: GREEN = 2'b10   YELLOW = 2'b01    RED = 2'b00
 | S2    | 0100     |
 | S3    | 1000     |
 
+I chose to use one-hot encoding due to the fact that it would require less external gates (combinational logic), reducing propogation delay as a whole. Although it would require two more flip-flops than binary encoding, the reduction of next-state logic complexity makes it worth it. 
