@@ -10,14 +10,14 @@ Above is the state diagram for the light controller itself. S0 is where Light A 
 
 ### State Encoding Table and State Transition Table
 
-2-bit Binary Encoding for Traffic Lights 
+*2-bit Binary Encoding for Traffic Lights*
 | Light  | Binary |
 |--------|--------|
 | GREEN  | 2'b10  |
 | YELLOW | 2'b01  |
 | RED    | 2'b00  |
 
-State Encoding Table
+*State Encoding Table*
 | State | One-Hot Code |
 |----------|----------|
 | S0    | 0001     |
@@ -26,3 +26,19 @@ State Encoding Table
 | S3    | 1000     |
 
 I chose to use one-hot encoding due to the fact that it would require less external gates (combinational logic), reducing propogation delay as a whole. Although it would require two more flip-flops than binary encoding, the reduction of next-state logic complexity makes it worth it. 
+
+## Extended State Table
+
+| Present State |       | Input       | Next State   |       | Output        |
+|---------------|-------|------------|--------------|-------|---------------|
+| A | B | C | D  | x | y | z | w | A | B | C | D | Y1 | Y2 | Y3 | Y4 |
+| 0 | 0 | 0 | 0  | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0  | 0  | 0  | 0  |
+| 0 | 0 | 0 | 0  | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0  | 0  | 0  | 0  |
+| 0 | 0 | 0 | 0  | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0  | 0  | 0  | 0  |
+| 0 | 0 | 0 | 0  | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0  | 0  | 0  | 0  |
+| 0 | 0 | 0 | 0  | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0  | 0  | 0  | 0  |
+| … | … | … | …  | … | … | … | … | … | … | … | … | …  | …  | …  | …  |
+
+
+
+
