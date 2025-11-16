@@ -13,9 +13,9 @@ Above is the state diagram for the light controller itself. S0 is where Light A 
 *2-bit Binary Encoding for Traffic Lights*
 | Light  | Binary |
 |--------|--------|
-| GREEN  | 2'b10  |
-| YELLOW | 2'b01  |
-| RED    | 2'b00  |
+| GREEN  | 10  |
+| YELLOW | 01  |
+| RED    | 00  |
 
 *State Encoding Table*
 | State | One-Hot Code |
@@ -39,6 +39,7 @@ I chose to use one-hot encoding due to the fact that it would require less exter
 | 0 | 1 | 0 | 0 | X | 1 | X | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 0 | 1 | 0 | 0 | X | 1 | X | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 1 | 0 | 0 | 0 | X | X | X | X | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+
 
 
 
