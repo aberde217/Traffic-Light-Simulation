@@ -5,4 +5,6 @@ This is a design of an actuated traffic light controller at a four-way intersect
 ### State Diagram
 <img src="TL_StateDiagram.png" alt="Diagram" width="50%"/>
 
+Above is the state diagram for the light controller itself. S0 is where Light A is green and Light B is red. S1 is where Light A is yellow and Light B is red. S3 is where Light A is red and Light B is green. S4 is where Light A is red and Light B is yellow.
+
 
