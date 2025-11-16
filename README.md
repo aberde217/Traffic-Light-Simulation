@@ -34,6 +34,7 @@ I chose to use one-hot encoding due to the fact that it would require less exter
 | 0 | 0 | 0 | 1 | 1 | X | 0 | X | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | 0 | 0 | 0 | 1 | 1 | X | 1 | X | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 | 0 | 0 | 1 | 0 | X | X | X | X | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | X | 0 | X | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 
 
