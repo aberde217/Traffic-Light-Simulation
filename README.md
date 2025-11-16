@@ -2,7 +2,10 @@
 
 This is a design of an actuated traffic light controller at a four-way intersection. A Traffic Light Controller are finite state machines at their simplest form, so we can represent its behavior with states and various transitions. 
 
-### State Diagram
+### State Diagrams
+
+<img src="GC_StateDiagram.png" alt="Diagram" width="50%"/>
+Above is the state diagram for a modulo-10 counter, which will serve as the hardware for assigning values to time_upA and time_upB. 
 
 <img src="TL_StateDiagram.png" alt="Diagram" width="50%"/>
 
@@ -39,6 +42,7 @@ I chose to use one-hot encoding due to the fact that it would require less exter
 | 0 | 1 | 0 | 0 | X | 1 | X | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 0 | 1 | 0 | 0 | X | 1 | X | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 1 | 0 | 0 | 0 | X | X | X | X | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+
 
 
 
