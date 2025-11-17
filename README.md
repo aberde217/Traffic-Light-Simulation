@@ -121,7 +121,7 @@ From this table, we can derive the next state and output equations for the count
     <th>A</th><th>B</th><th>C</th><th>D</th>
     <th>Ta</th><th>Tb</th><th>time_upA</th><th>time_upB</th>
     <th>A'</th><th>B'</th><th>C'</th><th>D'</th>
-    <th>La1</th><th>La0</th><th>Lb0</th><th>Lb1</th>
+    <th>La1</th><th>La0</th><th>Lb1</th><th>Lb0</th>
   </tr>
 
   <tr>
@@ -194,6 +194,18 @@ From this table, we can derive the next state and output equations for the count
     <td>0</td><td>0</td><td>0</td><td>1</td>
   </tr>
 </table>
+
+From this table, we can derive the next state and output equations for the counter. The equation for each is below is:
+- A' = (B * ~Tb * ~time_upB) + (B * ~Tb * time_upB) + (B * Tb * time_upB)
+- B' = C + (B * Tb * ~time_upB)
+- C' = (D * ~Ta * ~time_upA) + (D * ~Ta * time_upA) + (D * Ta * time_upA)
+- D' = (D * Ta * ~time_upA) + A
+- La1 = D
+- La0 = C
+- Lb1 = B
+- Lb0 = A
+
+
 
 
 
