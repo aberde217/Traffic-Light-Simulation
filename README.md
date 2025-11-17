@@ -2,7 +2,7 @@
 
 This is a design of an actuated traffic light controller at a four-way intersection. A Traffic Light Controller are finite state machines at their simplest form, so we can represent its behavior with states and various transitions. 
 
-<img src="Traffic4wayInt.png" alt="Diagram" width="50%"/>
+<img src="Traffic4WayInt.png" alt="Diagram" width="50%"/>
 
 ### State Diagrams
 
@@ -209,6 +209,7 @@ From this table, we can derive the next state and output equations for the count
 - La0 = C
 - Lb1 = B
 - Lb0 = A
+
 
 
 
