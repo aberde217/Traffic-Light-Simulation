@@ -3,34 +3,33 @@
 This is a design of an actuated traffic light controller at a four-way intersection. A Traffic Light Controller are finite state machines at their simplest form, so we can represent its behavior with states and various transitions. 
 
 <img src="Traffic4WayInt.png" alt="Diagram" width="50%"/>
-
+  
 Though we have four traffic lights in total, we don't need to represent each light individually. The North-South lights will be labeled La, and the East-West lights will be labeled Lb. Every traffic light will have a traffic sensor, which will detect nearby traffic. Every light can be either Green, Yellow, or Red. While a light is green or yellow, the other MUST be red. Furthermore, once a light is green, it isn't just green for an indefinite amount of time. It stays green while traffic is detected, but only for a maxiumum time of 10 seconds. Essentially, we'll have two inputs Ta and Tb, as well as two outputs La and Lb. Below is how we'd structure the FSM:
 
-<div align="center"> 
 <img src="TrafficSimFSM.png" alt="Diagram" width="50%"/>
-</div>
+
 
 ### State Diagrams
-<div align="center"> 
+
 <img src="GreenCounter_StateDiagram.png" alt="Diagram" width="50%"/>
-</div>
+
 
 Above is the state diagram for a modulo-10 counter, which is responsible for driving  time_upA and time_upB. Like most counters, this FSM is a moore machine and has no inputs but an enable bit. 
-<div align="center"> 
+ 
 <img src="TL_StateDiagram.png" alt="Diagram" width="50%"/>
-</div>
+
 
 Above is the state diagram for the light controller itself. S0 is where Light A is green and Light B is red. S1 is where Light A is yellow and Light B is red. S3 is where Light A is red and Light B is green. S4 is where Light A is red and Light B is yellow.
 
 ### State Encoding Table and State Transition Table
-<div align="center"> 
+
 *2-bit Binary Encoding for Traffic Lights*
 | Light  | Binary |
 |--------|--------|
 | GREEN  | 10  |
 | YELLOW | 01  |
 | RED    | 00  |
-</div>
+
 
 *State Encoding Table*
 | State | One-Hot Code |
