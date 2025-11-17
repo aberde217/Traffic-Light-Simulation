@@ -4,6 +4,8 @@ This is a design of an actuated traffic light controller at a four-way intersect
 
 <img src="Traffic4WayInt.png" alt="Diagram" width="50%"/>
 
+Though we have four traffic lights in total, we don't need to represent each light individually. The North-South lights will be labeled La, and the East-West lights will be labeled Lb. Every traffic light will have a traffic sensor, which will detect nearby traffic. Every light can be either Green, Yellow, or Red. While a light is green or yellow, the other MUST be red. Furthermore, once a light is green, it isn't just green for an indefinite amount of time. It stays green while traffic is detected, but only for a maxiumum time of 10 seconds.  
+
 ### State Diagrams
 
 <img src="GreenCounter_StateDiagram.png" alt="Diagram" width="50%"/>
@@ -209,6 +211,7 @@ From this table, we can derive the next state and output equations for the count
 - La0 = C
 - Lb1 = B
 - Lb0 = A
+
 
 
 
