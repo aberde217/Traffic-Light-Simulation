@@ -32,6 +32,7 @@ Above is the state diagram for the light controller itself. S0 is where Light A 
 I chose to use one-hot encoding due to the fact that it would require less external gates (combinational logic), reducing propogation delay as a whole. Although it would require two more flip-flops than binary encoding, the reduction of next-state logic complexity makes it worth it. 
 
 <br>
+
 *State Transition Table for Traffic Light Controller*
 <table>
   <tr>
@@ -204,6 +205,7 @@ From this table, we can derive the next state and output equations for the count
 - La0 = C
 - Lb1 = B
 - Lb0 = A
+
 
 
 
