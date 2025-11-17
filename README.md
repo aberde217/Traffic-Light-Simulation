@@ -109,6 +109,8 @@ From this table, we can derive the next state and output equations for the count
 - D' = ~D
 - count = A * ~C * ~D
 
+<br>
+
 *State Transition Table for Traffic Light Controller*
 <table>
   <tr>
@@ -205,6 +207,7 @@ From this table, we can derive the next state and output equations for the count
 - La0 = C
 - Lb1 = B
 - Lb0 = A
+
 
 
 
