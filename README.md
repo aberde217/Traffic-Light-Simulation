@@ -80,44 +80,45 @@ I chose to use one-hot encoding due to the fact that it would require less exter
     <td>0</td><td>0</td><td>1</td><td>0</td>
     <td>X</td><td>X</td><td>X</td><td>X</td>
     <td>0</td><td>1</td><td>0</td><td>0</td>
-    <td>0</td><td>0</td><td>0</td><td>0</td>
+    <td>0</td><td>1</td><td>0</td><td>0</td>
   </tr>
 
   <tr>
     <td>0</td><td>1</td><td>0</td><td>0</td>
     <td>X</td><td>0</td><td>X</td><td>0</td>
     <td>1</td><td>0</td><td>0</td><td>0</td>
-    <td>0</td><td>0</td><td>0</td><td>0</td>
+    <td>0</td><td>0</td><td>1</td><td>0</td>
   </tr>
 
   <tr>
     <td>0</td><td>1</td><td>0</td><td>0</td>
     <td>X</td><td>0</td><td>X</td><td>1</td>
     <td>1</td><td>0</td><td>0</td><td>0</td>
-    <td>0</td><td>0</td><td>0</td><td>0</td>
+    <td>0</td><td>0</td><td>1</td><td>0</td>
   </tr>
 
   <tr>
     <td>0</td><td>1</td><td>0</td><td>0</td>
     <td>X</td><td>1</td><td>X</td><td>0</td>
     <td>0</td><td>1</td><td>0</td><td>0</td>
-    <td>0</td><td>0</td><td>0</td><td>0</td>
+    <td>0</td><td>0</td><td>1</td><td>0</td>
   </tr>
 
   <tr>
     <td>0</td><td>1</td><td>0</td><td>0</td>
     <td>X</td><td>1</td><td>X</td><td>1</td>
     <td>1</td><td>0</td><td>0</td><td>0</td>
-    <td>0</td><td>0</td><td>0</td><td>0</td>
+    <td>0</td><td>0</td><td>1</td><td>0</td>
   </tr>
 
   <tr>
     <td>1</td><td>0</td><td>0</td><td>0</td>
     <td>X</td><td>X</td><td>X</td><td>X</td>
     <td>0</td><td>0</td><td>0</td><td>1</td>
-    <td>0</td><td>0</td><td>0</td><td>0</td>
+    <td>0</td><td>0</td><td>0</td><td>1</td>
   </tr>
 </table>
+
 
 
 
