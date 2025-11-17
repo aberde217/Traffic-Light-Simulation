@@ -5,6 +5,7 @@ This is a design of an actuated traffic light controller at a four-way intersect
 ### State Diagrams
 
 <img src="GreenCounter_StateDiagram.png" alt="Diagram" width="50%"/>
+
 Above is the state diagram for a modulo-10 counter, which is responsible for driving  time_upA and time_upB. Like most counters, this FSM is a moore machine and has no inputs but an enable bit. 
 
 <img src="TL_StateDiagram.png" alt="Diagram" width="50%"/>
@@ -42,6 +43,93 @@ I chose to use one-hot encoding due to the fact that it would require less exter
 | 0 | 1 | 0 | 0 | X | 1 | X | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 0 | 1 | 0 | 0 | X | 1 | X | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 1 | 0 | 0 | 0 | X | X | X | X | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+
+<table>
+  <tr>
+    <th colspan="4">Present State</th>
+    <th colspan="4">Inputs</th>
+    <th colspan="4">Next State</th>
+    <th colspan="4">Outputs</th>
+  </tr>
+
+  <tr>
+    <th>A</th><th>B</th><th>C</th><th>D</th>
+    <th>Ta</th><th>Tb</th><th>time_upA</th><th>time_upB</th>
+    <th>A'</th><th>B'</th><th>C'</th><th>D'</th>
+    <th>Y1</th><th>Y2</th><th>Y3</th><th>Y4</th>
+  </tr>
+
+  <tr>
+    <td>0</td><td>0</td><td>0</td><td>1</td>
+    <td>0</td><td>X</td><td>0</td><td>X</td>
+    <td>0</td><td>0</td><td>1</td><td>0</td>
+    <td>0</td><td>0</td><td>0</td><td>0</td>
+  </tr>
+
+  <tr>
+    <td>0</td><td>0</td><td>0</td><td>1</td>
+    <td>0</td><td>X</td><td>1</td><td>X</td>
+    <td>0</td><td>0</td><td>1</td><td>0</td>
+    <td>0</td><td>0</td><td>0</td><td>0</td>
+  </tr>
+
+  <tr>
+    <td>0</td><td>0</td><td>0</td><td>1</td>
+    <td>1</td><td>X</td><td>0</td><td>X</td>
+    <td>0</td><td>0</td><td>0</td><td>1</td>
+    <td>0</td><td>0</td><td>0</td><td>0</td>
+  </tr>
+
+  <tr>
+    <td>0</td><td>0</td><td>0</td><td>1</td>
+    <td>1</td><td>X</td><td>1</td><td>X</td>
+    <td>0</td><td>0</td><td>1</td><td>0</td>
+    <td>0</td><td>0</td><td>0</td><td>0</td>
+  </tr>
+
+  <tr>
+    <td>0</td><td>0</td><td>1</td><td>0</td>
+    <td>X</td><td>X</td><td>X</td><td>X</td>
+    <td>0</td><td>1</td><td>0</td><td>0</td>
+    <td>0</td><td>0</td><td>0</td><td>0</td>
+  </tr>
+
+  <tr>
+    <td>0</td><td>1</td><td>0</td><td>0</td>
+    <td>X</td><td>0</td><td>X</td><td>0</td>
+    <td>1</td><td>0</td><td>0</td><td>0</td>
+    <td>0</td><td>0</td><td>0</td><td>0</td>
+  </tr>
+
+  <tr>
+    <td>0</td><td>1</td><td>0</td><td>0</td>
+    <td>X</td><td>0</td><td>X</td><td>1</td>
+    <td>1</td><td>0</td><td>0</td><td>0</td>
+    <td>0</td><td>0</td><td>0</td><td>0</td>
+  </tr>
+
+  <tr>
+    <td>0</td><td>1</td><td>0</td><td>0</td>
+    <td>X</td><td>1</td><td>X</td><td>0</td>
+    <td>0</td><td>1</td><td>0</td><td>0</td>
+    <td>0</td><td>0</td><td>0</td><td>0</td>
+  </tr>
+
+  <tr>
+    <td>0</td><td>1</td><td>0</td><td>0</td>
+    <td>X</td><td>1</td><td>X</td><td>1</td>
+    <td>1</td><td>0</td><td>0</td><td>0</td>
+    <td>0</td><td>0</td><td>0</td><td>0</td>
+  </tr>
+
+  <tr>
+    <td>1</td><td>0</td><td>0</td><td>0</td>
+    <td>X</td><td>X</td><td>X</td><td>X</td>
+    <td>0</td><td>0</td><td>0</td><td>1</td>
+    <td>0</td><td>0</td><td>0</td><td>0</td>
+  </tr>
+</table>
+
 
 
 
